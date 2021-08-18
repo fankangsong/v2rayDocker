@@ -13,7 +13,7 @@ cat > /etc/Caddyfile <<'EOF'
 domain
 {
   log ./caddy.log
-  proxy /one :2333 {
+  proxy /hello-world :2333 {
     websocket
     header_upstream -Origin
   }
@@ -40,7 +40,7 @@ cat > /etc/v2ray/config.json <<'EOF'
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-        "path": "/one"
+        "path": "/hello-world"
         }
       }
     }
@@ -60,11 +60,11 @@ sed -i "s/uuid/${uuid}/" /etc/v2ray/config.json
 cat > /srv/sebs.js <<'EOF'
  {
     "add":"domain",
-    "aid":"0",
-    "host":"",
+    "aid":"64",
+    "host":"domain",
     "id":"uuid",
     "net":"ws",
-    "path":"/one",
+    "path":"/hello-world",
     "port":"443",
     "ps":"sebsclub",
     "tls":"tls",

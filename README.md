@@ -38,3 +38,8 @@ sudo docker stop v2ray
 
 有问题欢迎提issue， 感谢大家。参考了 caddy docker 和 v2ray 的 dockerfile 感谢！
 
+## build image
+
+```shell
+docker build -t v2ray-ws-tls:0.1 ./
+```
